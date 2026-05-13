@@ -1,5 +1,5 @@
 {
-  "name": "opencode-lisa",
+  "name": "@0xarcano/open-lisa",
   "version": "0.1.0",
   "description": "Native OpenCode port of Lisa's interactive specification interview workflow.",
   "type": "module",
@@ -10,17 +10,20 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./commands/*": "./commands/*"
+    "./commands/*": "./commands/*",
+    "./assets/*": "./assets/*"
   },
   "files": [
     "dist",
+    "assets",
     "commands",
     "bin",
     "README.md",
     "LICENSE"
   ],
   "bin": {
-    "opencode-lisa-install": "./bin/install-commands.js"
+    "opencode-lisa": "bin/cli.js",
+    "opencode-lisa-install": "bin/install-commands.js"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
